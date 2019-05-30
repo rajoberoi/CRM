@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24597" started-at="2019-05-30T04:51:49Z" finished-at="2019-05-30T04:52:13Z">
+  <suite name="Default suite" duration-ms="27624" started-at="2019-05-30T07:21:58Z" finished-at="2019-05-30T07:22:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24597" started-at="2019-05-30T04:51:49Z" finished-at="2019-05-30T04:52:13Z">
+    <test name="Default test" duration-ms="27624" started-at="2019-05-30T07:21:58Z" finished-at="2019-05-30T07:22:26Z">
       <class name="com.crm.testCases.CRMLoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="setUp" is-config="true" duration-ms="3421" started-at="2019-05-30T04:51:49Z" finished-at="2019-05-30T04:51:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="setUp" is-config="true" duration-ms="3242" started-at="2019-05-30T07:21:58Z" finished-at="2019-05-30T07:22:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addPeopleTest()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="addPeopleTest" duration-ms="11017" started-at="2019-05-30T04:51:52Z" finished-at="2019-05-30T04:52:03Z">
+        <test-method status="PASS" signature="addPeopleTest()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="addPeopleTest" duration-ms="13555" started-at="2019-05-30T07:22:01Z" finished-at="2019-05-30T07:22:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPeopleTest -->
-        <test-method status="PASS" signature="addCasesTest()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="addCasesTest" duration-ms="10133" started-at="2019-05-30T04:52:03Z" depends-on-methods="com.crm.testCases.CRMLoginTest.addPeopleTest" finished-at="2019-05-30T04:52:13Z">
+        <test-method status="PASS" signature="addCasesTest()[pri:0, instance:com.crm.testCases.CRMLoginTest@91161c7]" name="addCasesTest" duration-ms="10801" started-at="2019-05-30T07:22:15Z" depends-on-methods="com.crm.testCases.CRMLoginTest.addPeopleTest" finished-at="2019-05-30T07:22:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCasesTest -->

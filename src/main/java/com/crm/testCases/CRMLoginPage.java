@@ -92,17 +92,13 @@ public class CRMLoginPage extends Base{
 	@FindBy(xpath = "//*[@id='ember91']")
 	WebElement getCaseName;
 	
+	@FindBy(xpath = "//div[@class='kase-summary ember-view']//span[contains(text(), 'Open')]")
+	WebElement caseOpenStaus;
+		
+	@FindBy(xpath = "//a[@class='ember-view']")
+	WebElement verifiCaseName;
 	
-	
-	//@FindBy(xpath = "//*[contains(text(),'" + Constants.FIRST_NAME + "')]")   
-//	
-//	@FindBy(xpath =	"//*[text()='"+ Constants.FIRST_NAME + "']")
-//	WebElement getCaseName1;
-	
-	
-	
-	
-	
+		
 	public CRMLoginPage() {
 		PageFactory.initElements(driver, this);
 	}	
@@ -170,12 +166,17 @@ public class CRMLoginPage extends Base{
 	   driver.navigate().refresh();
 	   navigateCasesPage();
 	   Thread.sleep(2000);
-	   String fullName = Constants.FIRST_NAME + " "+Constants.LAST_NAME + "," +" "+ Constants.CASE_NAME;
-	   String partialXPath = Constants.FIRST_NAME + " "+Constants.LAST_NAME;
-	   String getFullName=  driver.findElement(By.xpath("//*[@class='list-results-cell is-kase is-system is-summary ember-view']//a[contains(text(),'"+ partialXPath +"')]")).getText();
-//	   System.out.println(getFullName + getCaseName1.getText());
+	   String fullName = Constants.FIRST_NAME + " "+ Constants.LAST_NAME + "," +" "+ Constants.CASE_NAME;
+	   String partialName = Constants.FIRST_NAME + " "+ Constants.LAST_NAME;
+	   String getFullName=  driver.findElement(By.xpath("//*[@class='list-results-cell is-kase is-system is-summary ember-view']//a[contains(text(),'"+ partialName +"')]")).getText();
+	   //--Assert if the Case is Created? -
 	   Assert.assertEquals(getFullName, fullName);
-	//   Assert.assertEquals(actual, expected);
+	   //--Assert if the Case is in Open status? -
+	   driver.findElement(By.xpath("//*[@class='list-results-cell is-kase is-system is-summary ember-view']//a[contains(text(),'"+ partialName +"')]")).click();
+	   explicitWait(caseOpenStaus);
+	   Assert.assertEquals(caseOpenStaus.getText(), "Open");
+	   //--Assert if the Case Name is Created? -
+	   Assert.assertEquals(verifiCaseName.getText(), partialName);
    }
      
 }
